@@ -11,7 +11,7 @@ include source.mak
 
 OBJEXT = obj
 REGEX_DEFINES = -DHAVE_REGCOMP -D__USE_GNU -Dbool=int -Dfalse=0 -Dtrue=1 -Dstrcasecmp=stricmp
-DEFINES = -DWIN32 $(REGEX_DEFINES)
+DEFINES = -DWIN32 -DUNIX_PATH_SEPARATOR $(REGEX_DEFINES)
 INCLUDES = -I. -Imain -Ignu_regex -Ifnmatch -Iparsers
 OPT = /O2
 REGEX_OBJS = $(REGEX_SRCS:.c=.obj)
